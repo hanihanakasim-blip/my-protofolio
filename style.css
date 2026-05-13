@@ -1,0 +1,272 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+body{
+background:#070b1a;
+color:white;
+}
+/* NAVBAR */
+nav{
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+z-index:1000;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(12px);
+}
+.logo{
+font-size:32px;
+font-weight:800;
+color:#ff4fd8;
+letter-spacing:2px;
+}
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+nav ul li a:hover{
+color:#ff4fd8;
+}
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 10%;
+gap:50px;
+}
+.hero-text{
+flex:1;
+}
+.small-text{
+color:#ff4fd8;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+.hero-text h1{
+font-size:75px;
+line-height:90px;
+margin-bottom:20px;
+}
+.hero-text h1 span{
+color:#ff4fd8;
+}
+.hero-text h2{
+font-size:30px;
+color:#d8d8d8;
+margin-bottom:20px;
+}
+.description{
+color:#a8a8a8;
+line-height:30px;
+margin-bottom:40px;
+}
+.hero-buttons{
+display:flex;
+gap:20px;
+}
+.btn{
+background:#ff4fd8;
+color:black;
+padding:15px 35px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #ff4fd8;
+}
+.btn-outline{
+border:2px solid #ff4fd8;
+color:#ff4fd8;
+padding:15px 35px;
+border-radius:12px;
+text-decoration:none;
+transition:0.3s;
+}
+.btn-outline:hover{
+background:#ff4fd8;
+color:black;
+}
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+.hero-image img{
+width:450px;
+border-radius:30px;
+box-shadow:0 0 40px rgba(255,79,216,0.3);
+}
+/* GENERAL */
+section{
+padding:100px 10%;
+}
+.title{
+text-align:center;
+margin-bottom:70px;
+}
+.title h1{
+font-size:50px;
+color:#ff4fd8;
+}
+/* ABOUT */
+.about-container{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+.about-image img{
+width:450px;
+border-radius:25px;
+}
+.about-text{
+flex:1;
+}
+.about-text h2{
+font-size:40px;
+margin-bottom:20px;
+}
+.about-text p{
+color:#bdbdbd;
+line-height:30px;
+margin-bottom:20px;
+}
+.info-box{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:30px;
+}
+.info-box div{
+background:#111827;
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid #1f2937;
+}
+.info-box h3{
+color:#ff4fd8;
+margin-bottom:10px;
+}
+/* SKILLS */
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+.skill-card{
+background:#111827;
+padding:40px;
+border-radius:25px;
+text-align:center;
+transition:0.3s;
+border:1px solid #1f2937;
+}
+.skill-card:hover{
+transform:translateY(-10px);
+border-color:#ff4fd8;
+box-shadow:0 0 25px rgba(255,79,216,0.2);
+}
+.skill-card h2{
+color:#ff4fd8;
+}
+/* PROJECTS */
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+.project-card{
+background:#111827;
+border-radius:25px;
+overflow:hidden;
+transition:0.3s;
+border:1px solid #1f2937;
+}
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(255,79,216,0.2);
+}
+.project-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+.project-info{
+padding:25px;
+}
+.project-info h2{
+color:#ff4fd8;
+margin-bottom:10px;
+}
+.project-info p{
+color:#bdbdbd;
+}
+/* CONTACT */
+.contact-box{
+text-align:center;
+}
+.contact-box p{
+margin-bottom:40px;
+color:#bdbdbd;
+font-size:20px;
+}
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:#02040c;
+color:#8f8f8f;
+}
+/* RESPONSIVE */
+@media(max-width:950px){
+nav{
+padding:20px 5%;
+}
+nav ul{
+display:none;
+}
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:150px;
+}
+.hero-text h1{
+font-size:55px;
+line-height:70px;
+}
+.hero-buttons{
+justify-content:center;
+}
+.hero-image img{
+width:100%;
+}
+.about-container{
+flex-direction:column;
+}
+.about-image img{
+width:100%;
+}
+.info-box{
+grid-template-columns:1fr;
+}
+}
