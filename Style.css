@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hana | Portfolio</title>  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">  <style>
+    :root{
+      --bg:#070b1a;
+      --card:#111827;
+      --text:#ffffff;
+      --muted:#bdbdbd;
+      --primary:#ff4fd8;
+    }
+
+    [data-theme="light"]{
+      --bg:#f5f7ff;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --primary:#d100a7;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      transition:0.3s;
+    }
+
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 10%;
+      background:rgba(0,0,0,0.3);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      color:var(--primary);
+      font-size:28px;
+      font-weight:800;
+    }
+
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    nav ul li a:hover{
+      color:var(--primary);
+    }
+
+    .menu-toggle, .theme-toggle{
+      cursor:pointer;
+      font-size:22px;
+      margin-left:15px;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:120px 10% 60px;
+      gap:40px;
+    }
+
+    .hero h1{
+      font-size:60px;
+    }
+
+    .hero span{
+      color:var(--primary);
+    }
+
+    .hero p{
+      margin-top:15px;
+      color:var(--muted);
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:25px;
+      padding:12px 25px;
+      background:var(--primary);
+      color:#000;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h2{
+      color:var(--primary);
+      font-size:40px;
+    }
+
+    .about, .skills, .projects{
+      opacity:0;
+      transform:translateY(40px);
+      transition:0.8s;
+    }
+
+    .show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .project{
+      background:var(--card);
+      border-radius:15px;
+      overflow:hidden;
+    }
+
+    .project img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .project div{
+      padding:15px;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    input, textarea{
+      width:100%;
+      margin-top:10px;
+      padding:12px;
+      border-radius:8px;
+      border:none;
+      outline:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#02040c;
+      color:#777;
+    }
+
+    @media(max-width:900px){
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      nav ul{
+        display:none;
+        position:absolute;
+        top:60px;
+        right:10%;
+        background:var(--card);
+        flex-direction:column;
+        padding:15px;
+        border-radius:10px;
+      }
+
+      nav ul.show{
+        display:flex;
+      }
+    }
+  </style></head><body><nav>
+  <div class="logo">HANA</div>
+  <div>
+    <span class="theme-toggle" onclick="toggleTheme()">🌓</span>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  </div>
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav><section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>Hana</span></h1>
+    <p>IT Student | Developer | Designer</p>
+    <a class="btn" href="#projects">View Projects</a>
+  </div>
+</section><section id="about" class="about">
+  <div class="title"><h2>About Me</h2></div>
+  <p>I am Hana, an IT student passionate about web development and software engineering.</p>
+</section><section id="skills" class="skills">
+  <div class="card">HTML</div>
+  <div class="card">CSS</div>
+  <div class="card">JavaScript</div>
+  <div class="card">Python</div>
+</section><section id="projects" class="projects">
+  <div class="project">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" />
+    <div>Portfolio Project</div>
+  </div>
+  <div class="project">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" />
+    <div>Task App</div>
+  </div>
+</section><section id="contact" class="contact">
+  <div class="title"><h2>Contact Me</h2></div>
+  <form onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Message" required></textarea>
+    <button class="btn" type="submit">Send</button>
+  </form>
+</section><footer>
+  © 2026 Hana Portfolio
+</footer><script>
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('show');
+}
+
+function toggleTheme(){
+  document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+}
+
+function sendMessage(e){
+  e.preventDefault();
+  alert('Message sent successfully!');
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.about, .skills, .projects').forEach(el => observer.observe(el));
+</script></body>
+</html>
